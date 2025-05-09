@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+/* Staff Container */
+.staff-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1294A7;
+    color: white;
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    font-size: 17px;
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding-left:10px;
+    border-radius: 5px;
+    transition:transform 0.3s, background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #067298;
+    transform: scale(1.1);
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    margin-top: 30px;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.main-content .tittle{
+    color: #1294A7;
+    font-size: 40px;
+}
+
+/*sidebar dropdown */
+.sidebar ul li .dropdown {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.sidebar ul li:hover .dropdown {
+    display: block;
+}
+
+.sidebar ul li .dropdown li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.sidebar ul li .dropdown li a:hover {
+    background-color: #067298;
+}
+
+
+/*Request report form*/
+.request-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+}
+
+.request-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.request-form input,
+.request-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.request-form .form-group-inline {
+    display: flex;
+    align-items: center;
+}
+
+.request-form .form-group-inline input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.request-form .form-group-inline button {
+    background-color: #1294A7;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.request-form .form-group-inline button:hover {
+    background-color: #067298;
+}
+
+.request-form button[type="submit"] {
+    background-color: #1294A7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.request-form button[type="submit"]:hover {
+    background-color: #067298;
+}
+
+
+/*Logout button*/
+.logout-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    text-align: center;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Bill form container */
+.bill-form-container {
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    max-width: 600px;
+}
+
+.bill-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bill-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.bill-form-container .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bill-form-container .form-group input,
+.bill-form-container .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.bill-form-container .si-button{
+    display: inline-block;
+    background-color: #1294A7;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.bill-form-container .si-button:hover {
+    background-color: #067298;
+}
+
+
+/* Invoice styling */
+.invoice-container {
+    width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+.invoice-container h1 {
+    color: #1294A7;
+    text-align: center;
+}
+
+.invoice-container h2 {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #1294A7;
+}
+.invoice-container p {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.print-button {
+    background-color: #1294A7;
+    color: #fff;
+    font-size: 16px;
+    margin: 20px 0;
+    margin-left: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.print-button:hover {
+    background-color: #067298;
+}
+
+.home-button {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 16px;
+    margin: 20px 0;
+    margin-left: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.home-button:hover {
+    background-color: #c0392b;
+}

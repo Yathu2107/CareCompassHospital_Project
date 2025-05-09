@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Admin Container */
+.admin-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1294A7;
+    color: white;
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    font-size: 17px;
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding-left:10px;
+    border-radius: 5px;
+    transition:transform 0.3s, background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #067298;
+    transform: scale(1.05);
+}
+
+/*sidebar dropdown */
+.sidebar ul li .dropdown {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.sidebar ul li:hover .dropdown {
+    display: block;
+}
+
+.sidebar ul li .dropdown li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.sidebar ul li .dropdown li a:hover {
+    background-color: #067298;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    margin-top: 30px;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.main-content .tittle{
+    color: #1294A7;
+    font-size: 40px;
+}
+
+/*Logout button*/
+.logout-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    text-align: center;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Add New Department Button */
+.add-btn {
+    background-color: #1294A7;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #067298;
+}
+
+/* Overlay Background */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Popup Form */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1001;
+}
+
+/* Popup Form Fields */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #1294A7;
+    margin-bottom: 15px;
+}
+
+.form-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit and Close Buttons */
+.submit-btn {
+    background-color: #1294A7;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #067298;
+}
+
+.cancel-btn {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Department Table */
+.department-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.department-table th, .department-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.department-table th {
+    background-color: #1294A7;
+    color: white;
+}
+
+.department-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.department-table a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+.department-table a{
+    background-color: #1294A7;
+    transition: background-color 0.3s;
+}
+
+.department-table a:hover {
+   background-color: #067298;
+}
+
+
+/* Pagination Styles */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    margin: 0 5px;
+    color: #1294A7;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #1294A7;
+}
+
+.pagination a.active {
+    background-color: #1294A7;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #067298;
+    color: white;
+}
+
+/* Edit Form */
+.main-content form {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.main-content form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.main-content .ed-btn {
+    background-color: #1294A7;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-content .ed-btn:hover {
+    background-color: #067298;
+}
+
+.cancel-btn {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    background-color: #e74c3c;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: #c0392b;
+}

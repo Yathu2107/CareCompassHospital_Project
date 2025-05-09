@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+/* Staff Container */
+.staff-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1294A7;
+    color: white;
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    font-size: 17px;
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding-left:10px;
+    border-radius: 5px;
+    transition:transform 0.3s, background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #067298;
+    transform: scale(1.1);
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    margin-top: 30px;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.main-content .tittle{
+    color: #1294A7;
+    font-size: 40px;
+}
+
+/*sidebar dropdown */
+.sidebar ul li .dropdown {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.sidebar ul li:hover .dropdown {
+    display: block;
+}
+
+.sidebar ul li .dropdown li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.sidebar ul li .dropdown li a:hover {
+    background-color: #067298;
+}
+
+/*Logout button*/
+.logout-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    text-align: center;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Doctor Table */
+.doctor-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.doctor-table th,
+.doctor-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.doctor-table th {
+    background-color: #1294A7;
+    color: #fff;
+}
+
+.doctor-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #fff;
+    color: #1294A7;
+    border: 1px solid #1294A7;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #1294A7;
+    color: #fff;
+}
+
+.pagination a.active {
+    background-color: #1294A7;
+    color: #fff;
+}
